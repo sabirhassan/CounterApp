@@ -24,13 +24,13 @@ class CounterApp extends React.Component {
             <View style={styles.container}>
 
                 
-                <TouchableOpacity style={{height:100,width:100,justifyContent:'space-around'}}  onPress={()=>this.props.increasecounter()}>
+                <TouchableOpacity style={styles.btn}  onPress={()=>this.props.increasecounter()}>
                 <Text style={{fontSize:20, color:'white' }}>Increase</Text>
                 </TouchableOpacity>
                 
                 <Text style={{fontSize:40}}>{this.props.counter}</Text>
                 
-                <TouchableOpacity style={{height:100,width:100,justifyContent:'space-around'}} onPress={()=>this.props.decreasecounter()}>
+                <TouchableOpacity style={styles.btn} onPress={()=>this.props.decreasecounter()}>
                 <Text style={{fontSize:20, color:'white' }}>Decrease</Text>
                 </TouchableOpacity>
             
@@ -48,8 +48,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'grey',
-    alignItems: 'center',
-    justifyContent: 'space-around',
+    alignItems:'center'
   },
+  btn: {
+      flex:1,
+      alignItems:'center',
+      justifyContent:'center',
+    },
+
 
 });
